@@ -15,11 +15,16 @@ def max_2_sum(arr)
   sum(max_two)
 end
 
-def sum_to_n?(arr, _n)
+def sum_to_n?(arr, n)
   # YOUR CODE HERE
-  false if [1, 0].include?(arr.length)
+  h = {}
+  arr.each do |num|
+    complement = n - num
+    return true if h.include?(complement)
 
-  arr.tally
+    h[num] = 0
+  end
+  false
 end
 
 # Part 2
