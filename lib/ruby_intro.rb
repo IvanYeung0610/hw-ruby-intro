@@ -4,14 +4,22 @@
 
 def sum(arr)
   # YOUR CODE HERE
+  sum = 0
+  arr.each { |num| sum += num }
+  sum
 end
 
 def max_2_sum(arr)
   # YOUR CODE HERE
+  max_two = arr.max(2)
+  sum(max_two)
 end
 
-def sum_to_n?(arr, n)
+def sum_to_n?(arr, _n)
   # YOUR CODE HERE
+  false if [1, 0].include?(arr.length)
+
+  arr.tally
 end
 
 # Part 2
