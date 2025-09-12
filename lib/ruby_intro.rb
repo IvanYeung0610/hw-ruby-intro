@@ -31,10 +31,16 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  res = 'Hello, '
+  res << name
 end
 
 def starts_with_consonant?(s)
   # YOUR CODE HERE
+  return false if s.empty?
+
+  first_letter = s[0].downcase
+  first_letter.match?(/[bcdfghjklmnpqrstvwxyz]/)
 end
 
 def binary_multiple_of_4?(s)
