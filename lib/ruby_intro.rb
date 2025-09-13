@@ -45,6 +45,10 @@ end
 
 def binary_multiple_of_4?(s)
   # YOUR CODE HERE
+  return false unless s.match?(/\A[10]+\z/)
+
+  num = s.to_i(2)
+  num % 4 == 0
 end
 
 # Part 3
